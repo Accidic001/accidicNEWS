@@ -1,19 +1,13 @@
 import React from 'react'
-import { useEffect, useState } from 'react'
+import { useState,useEffect } from 'react';
 import './News.css'
 
-
-
-
-
-function News() {
- 
+function Bussiness() {
     const [newsList, setnewsList]= useState([]);
     useEffect(() => {
-      fetch("https://newsapi.org/v2/top-headlines?country=ng&apiKey=694f717d201f4055af499662b4a459f0")
+      fetch("https://newsapi.org/v2/top-headlines?country=ng&category=business&apiKey=694f717d201f4055af499662b4a459f0")
       .then((response)=> response.json())
       .then((data)=>{
-
         setnewsList(data.articles);
       });
     },[]);
@@ -34,7 +28,7 @@ function News() {
             </div>;
       })}
     </div>
-  );
+  )
 }
 
-export default News
+export default Bussiness

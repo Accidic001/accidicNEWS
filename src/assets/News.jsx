@@ -1,6 +1,8 @@
 import React from 'react'
 import { useEffect, useState } from 'react'
 import './News.css'
+import newsLetter from './newsLetter';
+import NavBar from './Navbarr';
 
 
 
@@ -13,14 +15,15 @@ function News() {
       fetch("https://newsapi.org/v2/top-headlines?country=ng&apiKey=694f717d201f4055af499662b4a459f0")
       .then((response)=> response.json())
       .then((data)=>{
-
         setnewsList(data.articles);
       });
     },[]);
 
   return (
-    <div className='container-News container-fluid '>
-        <h2 className='text-primary intro'>Top 20 hottest News</h2>
+    <>
+
+    <div className='container-News container-fluid  m-2'>
+        <h2 className='text-primary intro '>Top 20 hottest News</h2>
       {Array.isArray(newsList)&&newsList?.map((val, key) => {
         return<div className='News' key={key}>
             <h3 className='text-danger text-center title pt-4'>{val.title}</h3>
@@ -33,7 +36,12 @@ function News() {
             </div>
             </div>;
       })}
+       
     </div>
+    <div>
+ 
+    </div>
+    </>
   );
 }
 

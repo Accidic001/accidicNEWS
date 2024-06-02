@@ -9,16 +9,19 @@ import Sport from './Sport';
 import Science from './Science';
 import Technology from './Technology';
 import { Link } from 'react-router-dom';
+import newsLetter from './newsLetter';
 
 function NavBar() {
   return (
-        <div>
-            <Navbar expand="lg" className="bg-body-tertiary">
-            <div className="container">
-                <Navbar.Brand href="#home">accidic<span>NEWS</span></Navbar.Brand>
+    <>
+        <div className='flex flex-column'>
+            <Navbar expand="lg" className=" " fixed='top' style={{backgroundColor:'#006d77',
+             boxShadow:" 0px 21px 39px -15px rgba(0,0,0,0.96)", color:"#90e0ef"}}>
+            <div className="container ">
+                <Navbar.Brand href="#home">accidic<span className='text-white'>NEWS</span></Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="me-auto">
+                    <Nav className="me-auto text-white" >
                         <Nav.Link as={Link} to={"/"}>Home</Nav.Link>
                         <Nav.Link as={Link} to={"/Bussiness"}>Bussiness</Nav.Link>
                         <Nav.Link as={Link} to={"/Entertainment"}>Entertaiment</Nav.Link>
@@ -29,8 +32,12 @@ function NavBar() {
                 </Navbar.Collapse>
             </div>
             </Navbar>
-            <h1 className='text-center text-uppercase mt-4 text-success'>wellcome to accidicNews....</h1>
+            <div className="intro mt-5 pt-5">
+            <h1 className='text-center text-uppercase'style={{color:"#03045e"}}>wellcome to accidicNews....</h1>
+            </div>
         </div>
+        <newsLetter />
+        </>
   )
 }
 

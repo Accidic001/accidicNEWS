@@ -8,7 +8,6 @@ import Technology from './assets/Technology'
 import Sport from './assets/Sport'
 import Science from './assets/Science'
 import Entertainment from './assets/Entertainment'
-import newsLetter from './assets/newsLetter'
 
 
 function App() {
@@ -16,7 +15,6 @@ function App() {
   return (
     <div className='container'>
       <NavBar />
-      <newsLetter />
       <Routes>
         <Route path="/"  element={<News />} />
         <Route path="/Bussiness"  element={<Bussiness />} />

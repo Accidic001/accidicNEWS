@@ -9,7 +9,7 @@ import Sport from './Sport';
 import Science from './Science';
 import Technology from './Technology';
 import { Link } from 'react-router-dom';
-import newsLetter from './newsLetter';
+import NewsLetter from './NewsLetter';
 
 function NavBar() {
   return (
@@ -36,7 +36,6 @@ function NavBar() {
             <h1 className='text-center text-uppercase'style={{color:"#03045e"}}>wellcome to accidicNews....</h1>
             </div>
         </div>
-        <newsLetter />
         </>
   )
 }

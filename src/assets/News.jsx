@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 import './News.css'
 import NewsLetter from './NewsLetter';
 import NavBar from './Navbarr';
+import NewsData from './NewsData';
 
 
 
@@ -21,6 +22,7 @@ function News() {
       }
       const data = await response.json();
       setnewsList(data.articles);
+      console.log(setnewsList);
     }
     catch (error){
       ('there has been a problem with your fetch operation:',error.message);
@@ -44,20 +46,19 @@ function News() {
 
     <div className='container-News container-fluid  m-2'>
         <h2 className=' intro ' style={{color:"#283618"}}>Top 20 hottest News</h2>
-      {Array.isArray(newsList)&&newsList?.map((val, key) => {
-        return<div className='News container' key={key}>
-            <h3 className=' text-center title pt-4'>{val.title}</h3>
-            <img src={val.urlToImage} alt="url"  />
-            <a href={val.url} className='btn btn-primary'>read more...</a>
-            <div className="data mt-3">
-             <p>Author : {val.author}</p>
-            <p className='text-danger'>source : {val.source.id}</p>
-            <p>{val.publishedAt}</p>
-            </div>
-            </div>;
-      })}
+      {newsList.map((val, key) => {
+        return(
+        <NewsData 
+        title={val.title}
+        publishedAt={val.publishedAt}
+        src={val.urlToImage}
+        author={val.author}
+        source ={val.source.id}  
+        key={key}
+        /> )
+      })};
        
-    </div>
+    </div>;
     <div>
     <NewsLetter />
     </div>

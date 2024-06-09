@@ -3,10 +3,12 @@ import './newsLetter.css';
 
 function NewsLetter() {
   return (
-    <div className='container bg-success h-350px w-100% letter'>
-      <div className="newsLater">
-        <h1 className='text-danger'>NEWS LETTER</h1>
-        <p>Aalways in touch with us for your daily news</p>
+    <div className=' letter'>
+        <h1 className=''>NEWS LETTER</h1>
+        <h2>Always in touch with us for your daily news</h2>
+      <div className="form d-flex">
+        <input type="email"  placeholder='enter your email'/>
+        <button>send</button>
       </div>
     </div>
   )

@@ -2,7 +2,7 @@ import React from 'react'
 import { useEffect, useState } from 'react'
 import './News.css'
 import NewsLetter from './NewsLetter';
-import NavBar from './Navbarr';
+import NavBar from './Navbar';
 import NewsData from './NewsData';
 
 

@@ -9,7 +9,7 @@ import Sport from './Sport';
 import Science from './Science';
 import Technology from './Technology';
 import { Link } from 'react-router-dom';
-import NewsLetter from './NewsLetter';
+
 
 function NavBar() {
   return (

@@ -13,5 +13,6 @@ function NewsLetter() {
     </div>
   )
 }
+// adding comment
 
 export default NewsLetter
